@@ -72,6 +72,8 @@ Two functions, |flowpayoffs| and |bellman|, together code up this simple model. 
 	
 	First, we set the number of time periods (|nPeriods|) and firms (|nFirms|) that we would like to have in our sample.
 %}
+tic
+
 nPeriods = 100
 nFirms = 1000
 %{
@@ -145,6 +147,9 @@ disp([[beta;delta(2)] startvalues maxLikEstimates standardErrors]);
 Finally, consider the more realistic case that $\Pi$ is not known. In this case, \cite{nh94:rust} suggests a two-stage procedure. In the first stage, we estimate $\Pi$ using |estimatePi| and store the results in a $K\times K$ matrix |piHat|.
 %}
 piHat = estimatePi(iX,nSuppX)
+
+toc
+
 %{ 
 In the second stage, maximum partial likelihood estimates of $(\beta_0,\beta_1,\delta_1)$ can be computed using the NFXP procedure, with |piHat| replacing |capPi|. This, with the question how the first-stage sampling error affects the precision of the second-stage estimator of $(\beta_0,\beta_1,\delta_1)$, is left for the exercises.
 
