@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.3)  24 APR 2016 19:38
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.3)  24 APR 2016 20:15
 entering extended mode
 **IOps.tex
 ("C:\Users\Haritz\Desktop\Haritz Git\Rust problem set\PS\IOps.tex"
@@ -505,7 +505,7 @@ LaTeX Font Info:    Overwriting math alphabet `\mathbbm' in version `bold'
 LaTeX Font Info:    Overwriting math alphabet `\mathbbmss' in version `bold'
 (Font)                  U/bbmss/m/n --> U/bbmss/bx/n on input line 35.
 )
-No file IOps.aux.
+("C:\Users\Haritz\Desktop\Haritz Git\Rust problem set\PS\IOps.aux")
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
@@ -519,6 +519,7 @@ LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
 LaTeX Font Info:    ... okay on input line 18.
 LaTeX Font Info:    Try loading font information for T1+pplx on input line 18.
+
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pplx.fd"
 File: t1pplx.fd 2004/09/06 font definitions for T1/pplx.
 )
@@ -568,24 +569,33 @@ LaTeX Font Info:    Try loading font information for OT1+zplm on input line 19.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\ot1zplm.fd"
 File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
-) [1
+)
+LaTeX Font Info:    Font shape `T1/pplx/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/pplx/b/n' tried instead on input line 21.
+ [1
 
 {C:/Users/Haritz/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 ("C:\Users\Haritz\Desktop\Haritz Git\Rust problem set\PS\IOps.aux") ) 
 Here is how much of TeX's memory you used:
- 11462 strings out of 494045
- 212974 string characters out of 3145967
- 254947 words of memory out of 3000000
- 14502 multiletter control sequences out of 15000+200000
- 18622 words of font info for 40 fonts, out of 3000000 for 9000
+ 11498 strings out of 494045
+ 213461 string characters out of 3145967
+ 257955 words of memory out of 3000000
+ 14521 multiletter control sequences out of 15000+200000
+ 32601 words of font info for 71 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  63i,6n,57p,440b,196s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/urw/palatino/uplr8a.pfb>
-Output written on IOps.pdf (1 page, 17663 bytes).
+)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Haritz/AppData/Roam
+ing/MiKTeX/2.9/fonts/type1/public/mathpazo/fplmri.pfb><C:/Program Files (x86)/M
+iKTeX 2.9/fonts/type1/urw/palatino/uplb8a.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/urw/palatino/uplr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/urw/palatino/uplri8a.pfb>
+Output written on IOps.pdf (1 page, 72056 bytes).
 PDF statistics:
- 14 PDF objects out of 1000 (max. 8388607)
+ 38 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

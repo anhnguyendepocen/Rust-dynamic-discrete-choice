@@ -18,6 +18,26 @@
 \begin{document}
 \maketitle
 
+\section{Exercise 3}
 
+First of all, we perform a logit with a as dependent variable and polynomials of x as independent variables (x, $x^2$ and $x^3$). We make sure that we do not include an intercept, since x never takes value zero in this setting. When we calculate the predicted probabilities of changing the engine given x, these consitute our estimators for the conditional choice probabilities $P(a = 1 \mid x)$.
+
+Once we do this, we can leverage on the Hotz-Miller inversion to get the differences of the value functions in the following way:
+
+\begin{equation}\label{HM}
+\hat{v}(x, 0) - \hat{v}(x, 1) = log(\hat{p}(0 \mid x)) - log(\hat{p}(1 \mid x)) 
+\end{equation}
+
+where the second element of $v(\quad,\quad)$ refers to the action of replacing the engine a. We can calculate the LHS of equation \ref{HM} for every x.
+
+The next step is to normalize the flow payoff, and we will, wlog, normalize the utility of changing the engine to zero, for every x, i.e. $u(x, 1) = 0$, $\forall$ x.
+
+After this useful normalization, we can characterize the value function of changing the engine as:
+
+$$v(x, 1) = \beta \left(v(x'=1, 1) - log(\hat{p}(1 \mid x'=1)) \right) $$ 
+
+where we are making use of the fact that after changing the engine tomorrow x is equal to one.
+
+First we solve for v(1, 1), and after that we can solve for v(x, 1), $\forall$ x.
 
 \end{document}
