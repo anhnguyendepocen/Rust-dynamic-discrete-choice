@@ -21,9 +21,9 @@ gen phat15     = 0.31663
 gen phat16     = 0.49881
 gen phat17     = 0.43439
 
-gen v11        = (beta/(1 - beta))*log(phat11)
-gen vx1        = (beta^2)/(1 - beta) - beta*log(phat11)
-gen v10        = v11 + log(1 - phat11) - log(phat11)
+gen vx1        = 1/(1 - beta) - (beta/(1 - ///
+beta))*log(phat11)
+gen v10        = vx1 + log(1 - phat11) - log(phat11)
 gen v20        = vx1 + log(1 - phat12) - log(phat12)
 gen v30        = vx1 + log(1 - phat13) - log(phat13)
 gen v40        = vx1 + log(1 - phat14) - log(phat14)
@@ -47,6 +47,7 @@ replace utilities = u40 if x==4
 replace utilities = u50 if x==5
 replace utilities = u60 if x==6
 replace utilities = u70 if x==7
+replace utilities = 1   if a==1
 
 reg utilities x rc, nocons
 
