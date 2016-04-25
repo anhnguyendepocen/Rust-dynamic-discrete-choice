@@ -29,25 +29,23 @@ supportRC = (31.5:0.5:62.5)';
 nSuppRC   = size(supportRC, 1);
 beta      = 0.95;
 thetaone  = 1; % Nomrmalization
-theta(1)  = thetaone;
 
 capPi               = estimatePiR(iRC,nSuppRC);
 capPi(isnan(capPi)) = 0 ;
-objF = zeros(tPeriods, nBuses);
 
-objF = @(par)negLogLikR(choices,iX,supportX,iRC,supportRC,capPi,beta,[thetaone; par],...
+objF = @(par)negLogLikR(choices,iX,supportX,iRC,supportRC,capPi,beta,thetaone,par,...
                                            @flowpay,@bellmanR,@fixedPointR,tolFixedPoint)
                                        
 startvalues = 1;
 lowerBounds = -Inf*ones(size(startvalues));
 
 OptimizerOptions = optimset('Display','iter','Algorithm','interior-point','AlwaysHonorConstraints','bounds',...
-                            'GradObj','on','TolFun',1E-6,'TolX',1E-10,'DerivativeCheck','off','TypicalX',[]);
+                            'GradObj','on','TolFun',1E-6,'TolX',1E-10,'DerivativeCheck','off','TypicalX',theta);
 maxLikEs = fmincon(objF,startvalues,[],[],[],[],lowerBounds,[],[],OptimizerOptions)
 
 disp('Summary of Results');
 disp('--------------------------------------------');
-disp([theta(2) startvalues maxLikEst]);
+disp([theta(2) startvalues maxLikEs]);
 
 
 toc
