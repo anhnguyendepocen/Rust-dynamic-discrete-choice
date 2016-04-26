@@ -9,7 +9,7 @@ deltaU        = capU1-capU0;
 pNotReplace   = 1./(1+exp(deltaU));
 
 laggedChoices = [zeros(1,size(choices,2));choices(1:end-1,:)];
-p             = choices + (1-2.*choices).*pNotReplace(iX+nSuppX.*laggedChoices, (iRC-30).*2 + nSuppRC.*laggedchoices);
+p             = choices + (1-2.*choices).*pNotReplace(iX+nSuppX.*laggedChoices, (iRC-30).*2 + nSuppRC.*laggedChoices);
 nll           = -sum(sum(log(p)));
    
     

@@ -50,4 +50,7 @@ replace utilities = u70 if x==7
 replace utilities = 1   if a==1
 
 reg utilities x rc, nocons
+*gen xrc = x/rc
+*drop if a==1
+*reg utilities xrc, nocons
 
