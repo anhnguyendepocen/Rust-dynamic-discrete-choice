@@ -50,7 +50,18 @@ replace utilities = u70 if x==7
 replace utilities = 1   if a==1
 
 reg utilities x rc, nocons
-*gen xrc = x/rc
-*drop if a==1
-*reg utilities xrc, nocons
 
+* Now I will use the method outlined by Paul Scott. The 
+* results should be the same
+
+gen pxtmr = 0
+replace pxtmr = phat17 if x==6 | x==7
+replace pxtmr = phat16 if x==5
+replace pxtmr = phat15 if x==4
+replace pxtmr = phat14 if x==3
+replace pxtmr = phat13 if x==2
+replace pxtmr = phat12 if x==1
+
+gen LHS = log(fitted/fittedzero) + beta*log(phat11/pxtmr) 
+
+reg LHS rc x, nocons
